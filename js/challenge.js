@@ -34,24 +34,6 @@ plus.addEventListener('click', function() {
 // button function: heart
 heart.addEventListener('click', appendLike);
 
-function appendLike(e) {
-    let likes = document.querySelector('.likes');
-    let currentTime = counter.innerText;
-    span.innerHTML++;
-    let li = document.getElementById(currentTime)
-
-    if(li) {
-        let text = li.innerText;
-        let textArray = text.split(" ");
-        let number = Number(textArray.slice(-2,-1));
-        li.innerHTML = `${currentTime} has been liked ${number + 1} times`;
-    } else {
-        let li = document.createElement('li');
-        li.setAttribute("id",currentTime)
-        likes.appendChild(li);
-        li.innerHTML = `${currentTime} has been liked 1 time`;
-    }
-};
 
 // button function: pause
 pause.addEventListener('click', function() {
